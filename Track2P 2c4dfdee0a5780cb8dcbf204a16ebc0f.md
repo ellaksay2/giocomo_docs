@@ -1,0 +1,51 @@
+# Track2P
+
+Github documentation: https://track2p.github.io/home.html
+
+notes on algo:
+
+- iterates through pairs of sessions in order (1/2, 2/3, 3/4 etc)
+- first performs affine transformation (preserve collinearity)
+- computed transformation is applied to s0
+- compute spatial similarity metric (maximize sum of intersection over union)
+- Otsu’s method (thresholding for similarity)
+    - 
+
+Installation:
+
+- conda env
+- no issues
+- gui runs well
+
+Run track2p:
+
+- directory must be structured as
+    - mouse > date > plane > .npy files
+
+ella notes:
+
+- run 1: combined planes + sessions
+    - pulling .npy files off of oak since I dont have space to store them locally lol
+    - using iscell threshold = 0.5
+        - 2792/31815 ROIs, 2656/31446 ROIs, 2710/32409 ROIs, 2837/31184 ROIs
+    - using channel 0 for transformation
+    - terminal outputs found 2 channels (good)
+    - RAN OUT OF MEMORY
+    - closed jupyter notebook kernel and run again without saving suite2p output
+- run 2: combined planes and sessions
+    - still pulling .npy files off of oak
+    - using iscell threshold = 0.6 and channel 0 for transformation
+    - running faster maybe?
+
+to do 
+
+- ~~write a script that grabs the suite2p files and puts them in oak~~
+- 
+
+0058-3: 72 cells 
+
+0059-1: 101 cells 
+
+0057-1: 
+
+0051-1: 24 cells
